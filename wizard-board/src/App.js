@@ -83,7 +83,7 @@ function App() {
       name: user.name.trim(),
       email: user.email.trim(),
       password: user.password.trim(),
-      terms: false
+      terms: ['terms'].filter(x => user[x] === true)
     }
     postNewUser(newUser)
     
